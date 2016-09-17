@@ -13,8 +13,18 @@ class Unidom::Shipment::Shipment < Unidom::Shipment::ApplicationRecord
 
   include Unidom::Common::Concerns::ModelExtension
 
-  validates :estimated_amount, presence: true, numericality: true
-  validates :actual_amount,    presence: true, numericality: true
+  validates :estimated_amount, presence: true, numericality: { greater_than_or_equal_to: 0 }
+  validates :actual_amount,    presence: true, numericality: { greater_than_or_equal_to: 0 }
+
+  belongs_to :sender_party,    polymorphic: true
+  belongs_to :sender_agent,    polymorphic: true
+  belongs_to :sender_location, polymorphic: true
+  belongs_to :sender_contact,  polymorphic: true
+
+  belongs_to :receiver_party,    polymorphic: true
+  belongs_to :receiver_agent,    polymorphic: true
+  belongs_to :receiver_location, polymorphic: true
+  belongs_to :receiver_contact,  polymorphic: true
 
   has_many :items, class_name: 'Unidom::Shipment::ShipmentItem'
 

@@ -1,4 +1,4 @@
-# Unidom Payment 支付领域模型引擎
+# Unidom Shipment 装运领域模型引擎
 
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](http://opensource.org/licenses/MIT)
 [![Gem Version](https://badge.fury.io/rb/unidom-shipment.svg)](https://badge.fury.io/rb/unidom-shipment)
@@ -35,5 +35,7 @@ The migration versions start with 200210.
 ## Call the Model
 
 ```ruby
-Unidom::Shipment::Shipment.valid_at.alive.first
+shipment       = Unidom::Shipment::Shipment.valid_at.alive.first
+shipment_item  = Unidom::Shipment::ShipmentItem.valid_at.alive.first
+shipment_items = shipment.items
 ```

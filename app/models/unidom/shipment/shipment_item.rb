@@ -6,9 +6,9 @@ class Unidom::Shipment::ShipmentItem < Unidom::Shipment::ApplicationRecord
 
   include Unidom::Common::Concerns::ModelExtension
 
-  validates :quantity, presence: true, numericality: true
+  validates :quantity, presence: true, numericality: { greater_than_or_equal_to: 0 }
 
   belongs_to :shipment, class_name:  'Unidom::Shipment::Shipment'
-  belongs_to :shiped,   polymorphic: true
+  belongs_to :shipped,  polymorphic: true
 
 end

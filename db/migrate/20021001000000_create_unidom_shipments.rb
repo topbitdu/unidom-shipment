@@ -4,10 +4,23 @@ class CreateUnidomShipments < ActiveRecord::Migration
 
     create_table :unidom_shipments, id: :uuid do |t|
 
-      #t.references :shopper, type: :uuid, null: false,
-      #  polymorphic: { null: false, default: '', limit: 200 }
-      #t.references :shop,    type: :uuid, null: false,
-      #  polymorphic: { null: false, default: '', limit: 200 }
+      t.references :sender_party,    type: :uuid, null: false,
+        polymorphic: { null: false, default: '', limit: 200 }
+      t.references :sender_agent,    type: :uuid, null: false,
+        polymorphic: { null: false, default: '', limit: 200 }
+      t.references :sender_location, type: :uuid, null: false,
+        polymorphic: { null: false, default: '', limit: 200 }
+      t.references :sender_contact,  type: :uuid, null: false,
+        polymorphic: { null: false, default: '', limit: 200 }
+
+      t.references :receiver_party,    type: :uuid, null: false,
+        polymorphic: { null: false, default: '', limit: 200 }
+      t.references :receiver_agent,    type: :uuid, null: false,
+        polymorphic: { null: false, default: '', limit: 200 }
+      t.references :receiver_location, type: :uuid, null: false,
+        polymorphic: { null: false, default: '', limit: 200 }
+      t.references :receiver_contact,  type: :uuid, null: false,
+        polymorphic: { null: false, default: '', limit: 200 }
 
       t.column :conveyance_code, 'char(4)', null: false, default: 'ZZZZ'
 
@@ -15,10 +28,14 @@ class CreateUnidomShipments < ActiveRecord::Migration
       t.date :estimated_shipped_on, null: false, default: nil
       t.date :estimated_arrived_on, null: false, default: nil
 
+      t.datetime :last_cancellable_at, null: false, default: nil
+
+      t.datetime :shipped_at,   null: true
+      t.datetime :received_at,  null: true
+      t.datetime :cancelled_at, null: true
+
       t.decimal :estimated_amount, null: false, default: 0.0, precision: 12, scale: 2
       t.decimal :actual_amount,    null: false, default: 0.0, precision: 12, scale: 2
-
-      t.date :latest_cancelled_on
 
       t.text :instruction
       t.text :description
@@ -33,8 +50,14 @@ class CreateUnidomShipments < ActiveRecord::Migration
 
     end
 
-    #add_index :unidom_shipments, :shopper_id
-    #add_index :unidom_shipments, :shop_id
+    add_index :unidom_shipments, :sender_party_id
+    add_index :unidom_shipments, :sender_agent_id
+    add_index :unidom_shipments, :sender_location_id
+    add_index :unidom_shipments, :sender_contact_id
+    add_index :unidom_shipments, :receiver_party_id
+    add_index :unidom_shipments, :receiver_agent_id
+    add_index :unidom_shipments, :receiver_location_id
+    add_index :unidom_shipments, :receiver_contact_id
 
   end
 
