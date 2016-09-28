@@ -11,4 +11,6 @@ class Unidom::Shipment::ShipmentItem < Unidom::Shipment::ApplicationRecord
   belongs_to :shipment, class_name:  'Unidom::Shipment::Shipment'
   belongs_to :shipped,  polymorphic: true
 
+  has_many :package_items, class_name: 'Unidom::Shipment::ShipmentPackageItem'
+
 end
