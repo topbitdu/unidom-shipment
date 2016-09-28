@@ -3,3 +3,9 @@
 ## v0.1
 1. Shipment model & migration
 2. Shipment Item model & migration
+
+## v0.2
+1. Shipment Package model & migration
+2. Shipment Packaging model & migration
+3. Shipment Receipt model & migration
+4. Improved the Shipment Item model to add the package_items association
