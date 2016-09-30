@@ -2,6 +2,7 @@
 
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](http://opensource.org/licenses/MIT)
 [![Gem Version](https://badge.fury.io/rb/unidom-shipment.svg)](https://badge.fury.io/rb/unidom-shipment)
+[![Dependency Status](https://gemnasium.com/badges/github.com/topbitdu/unidom-shipment.svg)](https://gemnasium.com/github.com/topbitdu/unidom-shipment)
 
 Unidom (UNIfied Domain Object Model) is a series of domain model engines. The Shipment domain model engine includes the Shipment, Shipment Item, Shipment Package, Shipment Package Item, and Shipment Receipt model.
 Unidom (统一领域对象模型)是一系列的领域模型引擎。装运领域模型引擎包括装运、装运项、装运包裹、装运包裹项、装运收据的模型。
