@@ -9,3 +9,6 @@
 2. Shipment Package Item model & migration
 3. Shipment Receipt model & migration
 4. Improve the Shipment Item model to add the package_items association
+
+## v0.3
+1. As Shipped concern
