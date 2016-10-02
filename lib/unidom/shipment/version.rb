@@ -1,5 +1,5 @@
 module Unidom
   module Shipment
-    VERSION = '0.2'.freeze
+    VERSION = '0.3'.freeze
   end
 end
