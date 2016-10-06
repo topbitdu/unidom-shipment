@@ -49,11 +49,13 @@ shipment_receipt      = shipment_package.receipts.create! shipped: shipment_item
 
 
 ## Include the Concerns
+
 ```ruby
 include Unidom::Shipment::Concerns::AsShipped
 ```
 
 ### As Shipped
+
 The As Shipped concern do the following tasks for the includer automatically:  
 1. Define the has_many :shipment_items macro as: ``has_many :shipment_items, class_name: 'Unidom::Shipment::ShipmentItem', foreign_key: :shipped_id``
 2. Define the has_many :shipment_receipts macro as: ``has_many :shipment_receipts, class_name: 'Unidom::Shipment::ShipmentReceipt', foreign_key: :shipped_id``
