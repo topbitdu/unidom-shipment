@@ -1,8 +1,8 @@
 PATH
   remote: .
   specs:
-    unidom-shipment (0.3.1)
-      unidom-common (>= 1.6)
+    unidom-shipment (0.3.2)
+      unidom-common (>= 1.7)
 
 GEM
   remote: https://rubygems.org/
