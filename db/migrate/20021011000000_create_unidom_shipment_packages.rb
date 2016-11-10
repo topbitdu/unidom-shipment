@@ -4,6 +4,8 @@ class CreateUnidomShipmentPackages < ActiveRecord::Migration
 
     create_table :unidom_shipment_packages, id: :uuid do |t|
 
+      t.string :serial_number, null: true, default: nil, limit: 200
+
       t.text :instruction
       t.text :description
 
@@ -16,6 +18,8 @@ class CreateUnidomShipmentPackages < ActiveRecord::Migration
       t.timestamps null: false
 
     end
+
+    add_index :unidom_shipment_packages, :serial_number
 
   end
 
