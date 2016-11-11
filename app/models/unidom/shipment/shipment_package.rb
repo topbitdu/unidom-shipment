@@ -8,6 +8,8 @@ class Unidom::Shipment::ShipmentPackage < Unidom::Shipment::ApplicationRecord
 
   include Unidom::Common::Concerns::ModelExtension
 
+  validates :serial_number, allow_blank: true, length: { in: 4..columns_hash['serial_number'].limit }
+
   has_many :items,    class_name: 'Unidom::Shipment::ShipmentPackageItem', foreign_key: :package_id
   has_many :receipts, class_name: 'Unidom::Shipment::ShipmentReceipt',     foreign_key: :package_id
 
