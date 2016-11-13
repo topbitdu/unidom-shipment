@@ -13,4 +13,6 @@ class Unidom::Shipment::ShipmentPackage < Unidom::Shipment::ApplicationRecord
   has_many :items,    class_name: 'Unidom::Shipment::ShipmentPackageItem', foreign_key: :package_id
   has_many :receipts, class_name: 'Unidom::Shipment::ShipmentReceipt',     foreign_key: :package_id
 
+  scope :serial_number_is, ->(serial_number) { where serial_number: serial_number }
+
 end
