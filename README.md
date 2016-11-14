@@ -41,7 +41,7 @@ shipment_item  = Unidom::Shipment::ShipmentItem.valid_at.alive.first
 shipment_items = shipment.items
 inventory_item = Unidom::Inventory::GroupedInventoryItem.valid_at.alive.first
 
-shipment_package      = Unidom::Shipment::ShipmentPackage.valid_at.alive.first
+shipment_package      = Unidom::Shipment::ShipmentPackage.serial_number_is('X5-20161231-1234').valid_at.alive.first
 shipment_package_item = shipment_package.items.create! shipment_item: shipment_item, quantity: 10
 shipment_receipt      = shipment_package.receipts.create! shipped: shipment_item.shipped, store_item: inventory_item
 ```
