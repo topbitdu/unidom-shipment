@@ -2,7 +2,7 @@
 
 ## v0.1
 1. Shipment model & migration (20021001000000)
-2. Shipment Item model & migration
+2. Shipment Item model & migration (20021002000000)
 
 ## v0.2
 1. Shipment Package model & migration
