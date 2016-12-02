@@ -6,7 +6,7 @@
 
 ## v0.2
 1. Shipment Package model & migration (20021011000000)
-2. Shipment Package Item model & migration
+2. Shipment Package Item model & migration (20021012000000)
 3. Shipment Receipt model & migration
 4. Improved the Shipment Item model to add the package_items association
 
