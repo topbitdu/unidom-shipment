@@ -8,7 +8,7 @@
 1. Shipment Package model & migration (20021011000000)
 2. Shipment Package Item model & migration (20021012000000)
 3. Shipment Receipt model & migration (20021013000000)
-4. Improved the Shipment Item model to add the package_items association
+4. Improved the Shipment Item model to add the ``has_many :package_items`` macro
 
 ## v0.3
 1. As Shipped concern
