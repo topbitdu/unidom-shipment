@@ -1,0 +1,15 @@
+enum:
+
+  unidom_conveyance:
+    customer_shipment:
+      code: CSSP
+    customer_return:
+      code: CSRT
+    purchase_shipment:
+      code: PCSP 
+    purchase_return:
+      code: PCRT
+    transfer:
+      code: TRSF
+    drop_shipment:
+      code: DROP
