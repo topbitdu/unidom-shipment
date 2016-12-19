@@ -1,0 +1,10 @@
+'zh-CN':
+  enum:
+
+    unidom_conveyance:
+      customer_shipment: 客户装运 # 把货物发给客户。
+      customer_return:   客户退回 # 从购买了产品的客户那里把退回的产品运回来。
+      purchase_shipment: 购买装运 # 从供应商那里把购买的货物运进来。
+      purchase_return:   进货退回 # 把发来的货物返回给供应商。
+      transfer:          转运     # 从内部组织到另一个内部组织调拨。
+      drop_shipment:     直接装运 # 销售商把产品从供应商那里直接运送给客户。
