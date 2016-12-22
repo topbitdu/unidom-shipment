@@ -12,6 +12,7 @@ class Unidom::Shipment::Shipment < Unidom::Shipment::ApplicationRecord
   self.table_name = 'unidom_shipments'
 
   include Unidom::Common::Concerns::ModelExtension
+  include ProgneTapera::EnumCode
 
   validates :estimated_amount, presence: true, numericality: { greater_than_or_equal_to: 0 }
   validates :actual_amount,    presence: true, numericality: { greater_than_or_equal_to: 0 }
@@ -27,5 +28,7 @@ class Unidom::Shipment::Shipment < Unidom::Shipment::ApplicationRecord
   belongs_to :receiver_contact,  polymorphic: true
 
   has_many :items, class_name: 'Unidom::Shipment::ShipmentItem'
+
+  code :conveyance, Unidom::Shipment::Conveyance
 
 end
