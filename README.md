@@ -59,3 +59,18 @@ include Unidom::Shipment::Concerns::AsShipped
 The As Shipped concern do the following tasks for the includer automatically:  
 1. Define the has_many :shipment_items macro as: ``has_many :shipment_items, class_name: 'Unidom::Shipment::ShipmentItem', foreign_key: :shipped_id``  
 2. Define the has_many :shipment_receipts macro as: ``has_many :shipment_receipts, class_name: 'Unidom::Shipment::ShipmentReceipt', foreign_key: :shipped_id``
+
+
+
+## Enum codes
+
+### Conveyance enum code
+
+```ruby
+Unidom::Shipment::Conveyance::customer_shipment # 客户装运
+Unidom::Shipment::Conveyance::customer_return   # 客户退回
+Unidom::Shipment::Conveyance::purchase_shipment # 购买装运
+Unidom::Shipment::Conveyance::purchase_return   # 进货退回
+Unidom::Shipment::Conveyance::transfer          # 转运
+Unidom::Shipment::Conveyance::drop_shipment     # 直接装运
+```
