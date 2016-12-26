@@ -1,3 +1,4 @@
+##
 # Shipment Item 是装运项。
 
 class Unidom::Shipment::ShipmentItem < Unidom::Shipment::ApplicationRecord
