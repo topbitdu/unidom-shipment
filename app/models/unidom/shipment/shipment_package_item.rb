@@ -1,3 +1,4 @@
+##
 # Shipment Package Item 是装运包裹内容。
 
 class Unidom::Shipment::ShipmentPackageItem < Unidom::Shipment::ApplicationRecord
