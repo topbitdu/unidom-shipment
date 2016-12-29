@@ -23,7 +23,7 @@
 1. Improved the Shipment Package model & migration to add the optional #``serial_number`` field
 
 ## v0.5
-1. Improve the Shipment Package model to add the :serial_number_is scope
+1. Improved the Shipment Package model to add the :serial_number_is scope
 
 ## v0.5.1
 1. Improve the Ruby Gem Specification to depend on [unidom-common](https://github.com/topbitdu/unidom-common) v1.7.1
