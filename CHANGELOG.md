@@ -31,3 +31,7 @@
 ## v0.6
 1. Conveyance enum code
 2. Improve the Shipment model to configure the Conveyance enum code
+
+## v0.6.1
+1. Improve the Ruby Gem Specification to depend on [unidom-common](https://github.com/topbitdu/unidom-common) v1.8
+2. Improve the Engine class to include the Engine Extension
