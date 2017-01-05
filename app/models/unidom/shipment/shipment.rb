@@ -1,3 +1,4 @@
+##
 # Shipment 是装运。
 # conveyance_code 是运送代码，可以是以下取值：
 # CSSP: Customer Shipment 客户装运，把货物发给客户。
