@@ -26,7 +26,7 @@
 1. Improved the Shipment Package model to add the :serial_number_is scope
 
 ## v0.5.1
-1. Improve the Ruby Gem Specification to depend on [unidom-common](https://github.com/topbitdu/unidom-common) v1.7.1
+1. Improved the Ruby Gem Specification to depend on [unidom-common](https://github.com/topbitdu/unidom-common) v1.7.1
 
 ## v0.6
 1. Conveyance enum code
