@@ -1,6 +1,8 @@
 # Unidom Shipment 装运领域模型引擎
 
+[![Documentation](http://img.shields.io/badge/docs-rdoc.info-blue.svg)](http://www.rubydoc.info/gems/unidom-shipment/frames)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](http://opensource.org/licenses/MIT)
+
 [![Gem Version](https://badge.fury.io/rb/unidom-shipment.svg)](https://badge.fury.io/rb/unidom-shipment)
 [![Dependency Status](https://gemnasium.com/badges/github.com/topbitdu/unidom-shipment.svg)](https://gemnasium.com/github.com/topbitdu/unidom-shipment)
 
@@ -56,8 +58,8 @@ include Unidom::Shipment::Concerns::AsShipped
 
 ### As Shipped
 
-The As Shipped concern do the following tasks for the includer automatically:  
-1. Define the has_many :shipment_items macro as: ``has_many :shipment_items, class_name: 'Unidom::Shipment::ShipmentItem', foreign_key: :shipped_id``  
+The As Shipped concern do the following tasks for the includer automatically:
+1. Define the has_many :shipment_items macro as: ``has_many :shipment_items, class_name: 'Unidom::Shipment::ShipmentItem', foreign_key: :shipped_id``
 2. Define the has_many :shipment_receipts macro as: ``has_many :shipment_receipts, class_name: 'Unidom::Shipment::ShipmentReceipt', foreign_key: :shipped_id``
 
 
