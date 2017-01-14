@@ -1,12 +1,5 @@
 ##
 # Shipment 是装运。
-# conveyance_code 是运送代码，可以是以下取值：
-# CSSP: Customer Shipment 客户装运，把货物发给客户。
-# CSRT: Customer Return 客户退回，从购买了产品的客户那里把退回的产品运回来。
-# PCSP: Purchase Shipment 购买装运，从供应商那里把购买的货物运进来。
-# PCRT: Purchase Return 进货退回，把发来的货物返回给供应商。
-# TRSF: Transfer 转运，从内部组织到另一个内部组织调拨。
-# DROP: Drop Shipment 直接装运，销售商把产品从供应商那里直接运送给客户。
 
 class Unidom::Shipment::Shipment < Unidom::Shipment::ApplicationRecord
 
