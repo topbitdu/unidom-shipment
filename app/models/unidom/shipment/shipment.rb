@@ -25,4 +25,4 @@ class Unidom::Shipment::Shipment < Unidom::Shipment::ApplicationRecord
 
   code :conveyance, Unidom::Shipment::Conveyance
 
-end
+end unless Unidom::Common::Neglection.namespace_neglected? 'Unidom::Shipment::Shipment'
