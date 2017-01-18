@@ -14,4 +14,4 @@ class Unidom::Shipment::ShipmentItem < Unidom::Shipment::ApplicationRecord
 
   has_many :package_items, class_name: 'Unidom::Shipment::ShipmentPackageItem'
 
-end
+end unless Unidom::Common::Neglection.namespace_neglected? 'Unidom::Shipment::ShipmentItem'
