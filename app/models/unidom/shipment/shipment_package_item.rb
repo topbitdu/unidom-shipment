@@ -12,4 +12,4 @@ class Unidom::Shipment::ShipmentPackageItem < Unidom::Shipment::ApplicationRecor
   belongs_to :package,       class_name: 'Unidom::Shipment::ShipmentPackage'
   belongs_to :shipment_item, class_name: 'Unidom::Shipment::ShipmentItem'
 
-end
+end unless Unidom::Common::Neglection.namespace_neglected? 'Unidom::Shipment::ShipmentPackageItem'
