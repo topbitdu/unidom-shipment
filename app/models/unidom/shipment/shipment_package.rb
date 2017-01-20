@@ -16,4 +16,4 @@ class Unidom::Shipment::ShipmentPackage < Unidom::Shipment::ApplicationRecord
 
   scope :serial_number_is, ->(serial_number) { where serial_number: serial_number }
 
-end
+end unless Unidom::Common::Neglection.namespace_neglected? 'Unidom::Shipment::ShipmentPackage'
