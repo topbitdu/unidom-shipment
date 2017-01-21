@@ -21,4 +21,4 @@ class Unidom::Shipment::ShipmentReceipt < Unidom::Shipment::ApplicationRecord
     self.received_at = Time.now if received_at.blank?
   end
 
-end
+end unless Unidom::Common::Neglection.namespace_neglected? 'Unidom::Shipment::ShipmentReceipt'
