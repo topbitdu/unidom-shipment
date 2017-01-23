@@ -76,3 +76,19 @@ Unidom::Shipment::Conveyance::purchase_return   # 进货退回
 Unidom::Shipment::Conveyance::transfer          # 转运
 Unidom::Shipment::Conveyance::drop_shipment     # 直接装运
 ```
+
+
+
+## Disable the Model & Migration
+
+If you only need the app components other than models, the migrations should be neglected, and the models should not be loaded.
+```ruby
+# config/initializers/unidom.rb
+Unidom::Common.configure do |options|
+
+  options[:neglected_namespaces] = %w{
+    Unidom::Shipment
+  }
+
+end
+```
