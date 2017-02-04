@@ -1,0 +1,5 @@
+require 'rspec/models/unidom/shipment/shipment_spec'              unless Unidom::Common::Neglection.namespace_neglected? 'Unidom::Shipment::Shipment'
+require 'rspec/models/unidom/shipment/shipment_item_spec'         unless Unidom::Common::Neglection.namespace_neglected? 'Unidom::Shipment::ShipmentItem'
+require 'rspec/models/unidom/shipment/shipment_package_spec'      unless Unidom::Common::Neglection.namespace_neglected? 'Unidom::Shipment::ShipmentPackage'
+require 'rspec/models/unidom/shipment/shipment_package_item_spec' unless Unidom::Common::Neglection.namespace_neglected? 'Unidom::Shipment::ShipmentPackageItem'
+require 'rspec/models/unidom/shipment/shipment_receipt_spec'      unless Unidom::Common::Neglection.namespace_neglected? 'Unidom::Shipment::ShipmentReceipt'
