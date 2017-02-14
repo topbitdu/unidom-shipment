@@ -8,8 +8,8 @@ class Unidom::Shipment::Shipment < Unidom::Shipment::ApplicationRecord
   include Unidom::Common::Concerns::ModelExtension
   include ProgneTapera::EnumCode
 
-  validates :estimated_amount, presence: true, numericality: { greater_than_or_equal_to: 0 }
-  validates :actual_amount,    presence: true, numericality: { greater_than_or_equal_to: 0 }
+  validates :estimated_amount, presence: true, numericality: { greater_than_or_equal_to: 0, less_than: 1_000_000_000 }
+  validates :actual_amount,    presence: true, numericality: { greater_than_or_equal_to: 0, less_than: 1_000_000_000 }
 
   belongs_to :sender_party,    polymorphic: true
   belongs_to :sender_agent,    polymorphic: true
