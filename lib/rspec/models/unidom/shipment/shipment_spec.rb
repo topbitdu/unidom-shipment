@@ -39,6 +39,50 @@ describe Unidom::Shipment::Shipment, type: :model do
 
     it_behaves_like 'Unidom::Common::Concerns::ModelExtension', model_attributes
 
+    it_behaves_like 'validates', model_attributes, :estimated_amount,
+      {                                      } => 0,
+      { estimated_amount: nil                } => 2,
+      { estimated_amount: ''                 } => 2,
+      { estimated_amount: '1'                } => 0,
+      { estimated_amount: 1                  } => 0,
+      { estimated_amount: 'A'                } => 1,
+      { estimated_amount: '1.23'             } => 0,
+      { estimated_amount: 1.23               } => 0,
+      { estimated_amount: '-0.01'            } => 1,
+      { estimated_amount: -0.01              } => 1,
+      { estimated_amount: '0'                } => 0,
+      { estimated_amount: 0                  } => 0,
+      { estimated_amount: '0.01'             } => 0,
+      { estimated_amount: 0.01               } => 0,
+      { estimated_amount: '999_999_999.99'   } => 0,
+      { estimated_amount: 999_999_999.99     } => 0,
+      { estimated_amount: '1_000_000_000'    } => 1,
+      { estimated_amount: 1_000_000_000      } => 1,
+      { estimated_amount: '1_000_000_000.01' } => 1,
+      { estimated_amount: 1_000_000_000.01   } => 1
+
+    it_behaves_like 'validates', model_attributes, :actual_amount,
+      {                                   } => 0,
+      { actual_amount: nil                } => 2,
+      { actual_amount: ''                 } => 2,
+      { actual_amount: '1'                } => 0,
+      { actual_amount: 1                  } => 0,
+      { actual_amount: 'A'                } => 1,
+      { actual_amount: '1.23'             } => 0,
+      { actual_amount: 1.23               } => 0,
+      { actual_amount: '-0.01'            } => 1,
+      { actual_amount: -0.01              } => 1,
+      { actual_amount: '0'                } => 0,
+      { actual_amount: 0                  } => 0,
+      { actual_amount: '0.01'             } => 0,
+      { actual_amount: 0.01               } => 0,
+      { actual_amount: '999_999_999.99'   } => 0,
+      { actual_amount: 999_999_999.99     } => 0,
+      { actual_amount: '1_000_000_000'    } => 1,
+      { actual_amount: 1_000_000_000      } => 1,
+      { actual_amount: '1_000_000_000.01' } => 1,
+      { actual_amount: 1_000_000_000.01   } => 1
+
   end
 
 end
