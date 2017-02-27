@@ -10,8 +10,8 @@ class Unidom::Shipment::ShipmentReceipt < Unidom::Shipment::ApplicationRecord
 
   include Unidom::Common::Concerns::ModelExtension
 
-  validates :accepted_quantity, presence: true, numericality: { greater_than_or_equal_to: 0, less_than: 1_000_000_000 }
-  validates :rejected_quantity, presence: true, numericality: { greater_than_or_equal_to: 0, less_than: 1_000_000_000 }
+  validates :accepted_quantity, presence: true, numericality: { greater_than_or_equal_to: 0, less_than_or_equal_to: 1_000_000_000 }
+  validates :rejected_quantity, presence: true, numericality: { greater_than_or_equal_to: 0, less_than_or_equal_to: 1_000_000_000 }
 
   belongs_to :package,    class_name:  'Unidom::Shipment::ShipmentPackage'
   belongs_to :shipped,    polymorphic: true
