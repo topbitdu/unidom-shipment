@@ -50,3 +50,7 @@
 2. Improved the Shipment Item model for the validations on the #quantity attribute
 3. Improve the Shipment spec for the validations on the #estimated_amount attribute, & the #actual_amount attribute
 4. Improve the Shipment Item spec for the validations on the #quantity attribute
+
+## v0.7.2
+1. Improve the Shipment Receipt model for the validations on the #accepted_quantity attribute, & the #rejected_quantity attribute
+2. Improve the Shipment Receipt spec for the validations on the #accepted_quantity attribute, & the #rejected_quantity attribute
