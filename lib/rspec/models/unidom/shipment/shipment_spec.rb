@@ -83,6 +83,8 @@ describe Unidom::Shipment::Shipment, type: :model do
       { actual_amount: '1_000_000_000.01' } => 1,
       { actual_amount: 1_000_000_000.01   } => 1
 
+    it_behaves_like 'ProgneTapera::EnumCode', described_class.new(model_attributes), :conveyance, Unidom::Shipment::Conveyance
+
   end
 
 end
