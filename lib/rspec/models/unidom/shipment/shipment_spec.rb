@@ -83,6 +83,22 @@ describe Unidom::Shipment::Shipment, type: :model do
       { actual_amount: '1_000_000_000.01' } => 1,
       { actual_amount: 1_000_000_000.01   } => 1
 
+    shipment_item_1_attributes = {
+      shipped_id:   SecureRandom.uuid,
+      shipped_type: 'Unidom::Shipment::Shipped::Mock',
+      ordinal:      1,
+      quantity:     10.00
+    }
+
+    shipment_item_2_attributes = {
+      shipped_id:   SecureRandom.uuid,
+      shipped_type: 'Unidom::Shipment::Shipped::Mock',
+      ordinal:      2,
+      quantity:     20.00
+    }
+
+    it_behaves_like 'has_many', model_attributes, :items, Unidom::Shipment::ShipmentItem, [ shipment_item_1_attributes, shipment_item_2_attributes ]
+
     it_behaves_like 'ProgneTapera::EnumCode', described_class.new(model_attributes), :conveyance, Unidom::Shipment::Conveyance
 
   end
