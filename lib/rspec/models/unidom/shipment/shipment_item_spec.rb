@@ -52,6 +52,18 @@ describe Unidom::Shipment::ShipmentItem, type: :model do
 
     it_behaves_like 'belongs_to', model_attributes, :shipment, Unidom::Shipment::Shipment, shipment_attributes
 
+    shipment_package_item_1_attributes = {
+      package_id: SecureRandom.uuid,
+      quantity:   10.00
+    }
+
+    shipment_package_item_2_attributes = {
+      package_id: SecureRandom.uuid,
+      quantity:   20.00
+    }
+
+    it_behaves_like 'has_many', model_attributes, :package_items, Unidom::Shipment::ShipmentPackageItem, [ shipment_package_item_1_attributes, shipment_package_item_2_attributes ]
+
   end
 
 end
