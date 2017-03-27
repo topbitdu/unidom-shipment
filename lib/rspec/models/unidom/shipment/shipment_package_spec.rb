@@ -26,6 +26,30 @@ describe Unidom::Shipment::ShipmentPackage, type: :model do
 
     it_behaves_like 'has_many', model_attributes, :items, Unidom::Shipment::ShipmentPackageItem, [ shipment_package_item_1_attributes, shipment_package_item_2_attributes ]
 
+    shipment_receipt_1_attributes = {
+      shipped_id:        SecureRandom.uuid,
+      shipped_type:      'Unidom::Shipment::Shipped::Mock',
+      store_item_id:     SecureRandom.uuid,
+      store_item_type:   'Unidom::Shipment::StoreItem::Mock',
+      accepted_quantity: 9,
+      rejected_quantity: 1,
+      received_at:       Time.now,
+      rejection_reason:  'Broken'
+    }
+
+    shipment_receipt_2_attributes = {
+      shipped_id:        SecureRandom.uuid,
+      shipped_type:      'Unidom::Shipment::Shipped::Mock',
+      store_item_id:     SecureRandom.uuid,
+      store_item_type:   'Unidom::Shipment::StoreItem::Mock',
+      accepted_quantity: 10,
+      rejected_quantity: 0,
+      received_at:       Time.now,
+      rejection_reason:  nil
+    }
+
+    it_behaves_like 'has_many', model_attributes, :receipts, Unidom::Shipment::ShipmentReceipt, [ shipment_receipt_1_attributes, shipment_receipt_2_attributes ]
+
   end
 
 end
