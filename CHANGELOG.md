@@ -53,7 +53,7 @@
 
 ## v0.7.2
 1. Improved the Shipment Receipt model for the validations on the #accepted_quantity attribute, & the #rejected_quantity attribute
-2. Improve the Shipment Receipt spec for the validations on the #accepted_quantity attribute, & the #rejected_quantity attribute
+2. Improved the Shipment Receipt spec for the validations on the #accepted_quantity attribute, & the #rejected_quantity attribute
 
 ## v0.7.3
 1. Improve the Shipment spec for the #conveyance_code attribute
