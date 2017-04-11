@@ -16,6 +16,9 @@ describe Unidom::Shipment::ShipmentPackageItem, type: :model do
 
     it_behaves_like 'Unidom::Common::Concerns::ModelExtension', model_attributes
 
+    it_behaves_like 'validates numericality', model_attributes, :quantity,
+      range: 0..1_000_000_000, minimum_inclusive: false, maximum_inclusive: false
+
   end
 
 end
