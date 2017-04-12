@@ -14,6 +14,9 @@ describe Unidom::Shipment::ShipmentPackage, type: :model do
 
     it_behaves_like 'Unidom::Common::Concerns::ModelExtension', model_attributes
 
+    it_behaves_like 'validates text', model_attributes, :serial_number,
+      length: 4..described_class.columns_hash['serial_number'].limit, allow_blank: true
+
     shipment_package_item_1_attributes = {
       shipment_item_id: SecureRandom.uuid,
       quantity:         10.00
