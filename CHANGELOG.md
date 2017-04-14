@@ -72,3 +72,7 @@
 ## v0.7.6
 1. Improve the Shipment Item spec for the ``has_many :package_items, class_name: 'Unidom::Shipment::ShipmentPackageItem', foreign_key: :package_id`` macro
 2. Improve the Shipment Package spec for the ``has_many :receipts, class_name: 'Unidom::Shipment::ShipmentReceipt', foreign_key: :package_id`` macro
+
+## v0.7.7
+1. Improve the Shipment Package spec for the validations on the #serial_number attribute
+2. Improve the Shipment Package Item spec for the validations on the #quantity attribute
