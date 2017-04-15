@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    unidom-shipment (0.7.6)
+    unidom-shipment (0.7.7)
       unidom-common (~> 1.9)
 
 GEM
