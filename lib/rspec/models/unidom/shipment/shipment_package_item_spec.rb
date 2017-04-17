@@ -19,6 +19,12 @@ describe Unidom::Shipment::ShipmentPackageItem, type: :model do
     it_behaves_like 'validates numericality', model_attributes, :quantity,
       range: 0..1_000_000_000, minimum_inclusive: false, maximum_inclusive: false
 
+    shipment_package_attributes = {
+      serial_number: SecureRandom.hex(16)
+    }
+
+    it_behaves_like 'belongs_to', model_attributes, :package, Unidom::Shipment::ShipmentPackage, shipment_package_attributes
+
   end
 
 end
