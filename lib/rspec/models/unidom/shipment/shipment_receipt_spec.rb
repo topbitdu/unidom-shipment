@@ -66,6 +66,12 @@ describe Unidom::Shipment::ShipmentReceipt, type: :model do
       { rejected_quantity: '1_000_000_000.01' } => 1,
       { rejected_quantity: 1_000_000_000.01   } => 1
 
+    shipment_package_attributes = {
+      serial_number: SecureRandom.hex(16)
+    }
+
+    it_behaves_like 'belongs_to', model_attributes, :package, Unidom::Shipment::ShipmentPackage, shipment_package_attributes
+
   end
 
 end
