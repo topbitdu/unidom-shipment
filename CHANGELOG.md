@@ -56,7 +56,7 @@
 2. Improved the Shipment Receipt spec for the validations on the #accepted_quantity attribute, & the #rejected_quantity attribute
 
 ## v0.7.3
-1. Improve the Shipment spec for the #conveyance_code attribute
+1. Improved the Shipment spec for the #conveyance_code attribute
 2. Improve the Shipment Item spec for the ``belongs_to :shipment, class_name:  'Unidom::Shipment::Shipment'`` macro
 
 ## v0.7.4
