@@ -60,7 +60,7 @@
 2. Improved the Shipment Item spec for the ``belongs_to :shipment, class_name:  'Unidom::Shipment::Shipment'`` macro
 
 ## v0.7.4
-1. Improve the Shipment spec for the ``has_many :items, class_name: 'Unidom::Shipment::ShipmentItem'`` macro
+1. Improved the Shipment spec for the ``has_many :items, class_name: 'Unidom::Shipment::ShipmentItem'`` macro
 2. Improve the Shipment Package spec for the ``has_many :items, class_name: 'Unidom::Shipment::ShipmentPackageItem', foreign_key: :package_id`` macro
 
 ## v0.7.5
