@@ -67,7 +67,7 @@
 1. Improved the Shipment model for the validations on the #estimated_amount attribute, & the #actual_amount attribute
 2. Improved the Shipment Item model for the validations on the #quantity attribute
 3. Improved the Shipment spec for the validations on the #estimated_amount attribute, & the #actual_amount attribute
-4. Improve the Shipment Item spec for the validations on the #quantity attribute
+4. Improved the Shipment Item spec for the validations on the #quantity attribute
 
 ## v0.7.6
 1. Improve the Shipment Item spec for the ``has_many :package_items, class_name: 'Unidom::Shipment::ShipmentPackageItem', foreign_key: :package_id`` macro
