@@ -75,7 +75,7 @@
 
 ## v0.7.7
 1. Improved the Shipment Package spec for the validations on the #serial_number attribute
-2. Improve the Shipment Package Item spec for the validations on the #quantity attribute
+2. Improved the Shipment Package Item spec for the validations on the #quantity attribute
 
 ## v0.7.8
 1. Improve the Shipment Package Item spec for the ``belongs_to :package, class_name: 'Unidom::Shipment::ShipmentPackage'`` macro
