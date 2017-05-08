@@ -46,7 +46,7 @@
 3. Validators RSpec examples manifest
 
 ## v0.7.1
-1. Improved the Shipment model for the validations on the #``estimated_amount`` attribute, & the #actual_amount attribute
+1. Improved the Shipment model for the validations on the #``estimated_amount`` attribute, & the #``actual_amount`` attribute
 2. Improved the Shipment Item model for the validations on the #quantity attribute
 3. Improved the Shipment spec for the validations on the #estimated_amount attribute, & the #actual_amount attribute
 4. Improved the Shipment Item spec for the validations on the #quantity attribute
