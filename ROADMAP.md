@@ -80,3 +80,7 @@
 ## v0.7.8
 1. Improve the Shipment Package Item spec for the ``belongs_to :package, class_name: 'Unidom::Shipment::ShipmentPackage'`` macro
 2. Improve the Shipment Receipt spec for the ``belongs_to :package, class_name: 'Unidom::Shipment::ShipmentPackage'`` macro
+
+## v0.7.9
+1. Improve the Ruby Gem Specification to depend on unidom-common v1.10
+2. Improve the Shipment migration, the Shipment Item migration, the Shipment Package migration, the Shipment Package Item migration, & the Shipment Receipt migration for the #opened_at column, & the #closed_at column
